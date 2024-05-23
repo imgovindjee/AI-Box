@@ -1,0 +1,209 @@
+.main {
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 25vh;
+    position: relative;
+
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 22px;
+        padding: 20px;
+        color: #585858;
+        background-color: rgb(248, 248, 248);
+
+        img {
+            width: 40px;
+            border-radius: 50%;
+        }
+
+        .logo__Name {
+            display: flex;
+
+            p {
+                letter-spacing: .1em;
+                align-content: center;
+            }
+        }
+    }
+
+    .main__container {
+        max-width: 900px;
+        margin: auto;
+
+        .greet {
+            margin: 50px 0px;
+            // margin: 25px 0px;
+            font-size: 56px;
+            color: #c4c7c5;
+            font-weight: 500;
+            padding: 20px;
+            letter-spacing: .04em;
+
+            p {
+                span {
+                    background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            padding: 20px;
+
+            .card {
+                height: 160px;
+                padding: 15px;
+                background-color: #f0f4f9;
+                border-radius: 10px;
+                position: relative;
+                cursor: pointer;
+
+                p {
+                    font-size: 17px;
+                    letter-spacing: .09em;
+                    color: #585858;
+                }
+
+                img {
+                    width: 35px;
+                    padding: 5px;
+                    position: absolute;
+                    background-color: white;
+                    border-radius: 50%;
+                    bottom: 10px;
+                    right: 10px;
+                }
+
+                &:hover {
+                    background-color: #dfe4ea;
+                    border-radius: 0;
+                }
+
+                transition: all .3s ease-in;
+            }
+        }
+
+
+        .main__bottom {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            max-width: 900px;
+            padding: 0px 20px;
+            margin: auto;
+
+            .search__box {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+                background-color: #f0f4f9;
+                padding: 10px 20px;
+                border-radius: 50px;
+
+                input {
+                    flex: 1;
+                    background: transparent;
+                    border: none;
+                    padding: 8px;
+                    font-size: 18px;
+                    outline: none;
+                    letter-spacing: .027em;
+                }
+
+                .search__box__icons {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+
+                    img {
+                        width: 24px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .bottom__info {
+                font-size: 13px;
+                margin: 15px auto;
+                text-align: center;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .results {
+        padding: 0px 5%;
+        max-height: 70vh;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .results__title {
+            display: flex;
+            align-items: center;
+            margin: 40px 0px;
+            gap: 20px;
+
+            img {
+                width: 40px;
+                border-radius: 50%;
+            }
+        }
+
+        .results__data {
+            display: flex;
+            align-items: start;
+            gap: 20px;
+
+            img {
+                width: 40px;
+                border-radius: 50%;
+            }
+
+            p {
+                font-size: 17px;
+                line-height: 1.8;
+                font-weight: 300;
+                text-align: justify;
+                letter-spacing: 0.01em;
+            }
+        }
+    }
+}
+
+
+
+
+@media (max-width: 600px) {
+    .main {
+        padding-bottom: 45vh;
+    }
+
+    .main__bottom {
+        .search__box {
+            padding: 5px 10px;
+
+            input {
+                flex: none;
+                width: 100%;
+
+                .search__box__icons {
+                    gap: 5px;
+
+                    img {
+                        width: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
